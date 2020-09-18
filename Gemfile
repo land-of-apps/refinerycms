@@ -50,6 +50,8 @@ group :test do
 
   # TODO: Use beta source for Rails 6 support
   gem 'rspec-rails', '~> 4.0.0.beta3'
+
+  gem 'appmap', git: 'https://github.com/applandinc/appmap-ruby'
 end
 
 # Load local gems according to Refinery developer preference.

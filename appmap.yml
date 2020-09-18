@@ -1,0 +1,7 @@
+name: refinerycms
+packages:
+- path: core
+- path: dragonfly
+- path: pages
+- path: images
+- path: resources
