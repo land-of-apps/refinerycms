@@ -1,3 +1,4 @@
+version: ~> 1.0
 language: ruby
 dist: bionic
 sudo: false
@@ -21,7 +22,7 @@ before_script:
   - export RETRY_COUNT=3
   - bin/rake refinery:testing:dummy_app
 script:
-  - APPMAP=true bundle exec rspec
+  - APPMAP=true bundle exec rake
 after_script:
   - env DEBUG=true ruby ./upload-appmaps tmp/appmap/*
 env:
