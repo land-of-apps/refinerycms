@@ -23,8 +23,6 @@ before_script:
   - bin/rake refinery:testing:dummy_app
 script:
   - APPMAP=true bundle exec rake
-after_script:
-  - env DEBUG=true ruby ./upload-appmaps tmp/appmap/*
 env:
   - DB=postgresql
 notifications:
