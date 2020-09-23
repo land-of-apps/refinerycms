@@ -46,6 +46,7 @@ group :test do
   gem 'launchy'
   gem 'coveralls', require: false
   gem 'rspec-retry'
+  gem 'appmap', git: 'https://github.com/applandinc/appmap-ruby'
 end
 
 # Load local gems according to Refinery developer preference.
