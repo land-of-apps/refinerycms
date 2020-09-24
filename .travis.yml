@@ -1,3 +1,5 @@
+
+version: ~> 1.0
 language: ruby
 cache: bundler
 before_install: gem install bundler
@@ -7,6 +9,8 @@ addons:
 before_script:
   - export RETRY_COUNT=3
   - bin/rake refinery:testing:dummy_app
+import:
+  - land-of-apps/land-of-apps:travis/ruby-imports.yml
 script:
   - APPMAP=true bundle exec rake
 env:
