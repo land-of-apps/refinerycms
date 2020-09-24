@@ -31,6 +31,8 @@ module Refinery
 
       append_gitignore!
 
+      append_appmap!
+
       append_asset_pipeline!
 
       forced_overwriting?
@@ -49,6 +51,13 @@ module Refinery
     end
 
     protected
+
+    def append_appmap!
+      create_file 'appmap.yml', <<~FILE
+        name: dummy
+        packages:
+      FILE
+    end
 
     def append_asset_pipeline!
       application_css = 'app/assets/stylesheets/application.css'
