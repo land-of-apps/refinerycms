@@ -2,24 +2,17 @@ version: ~> 1.0
 language: ruby
 dist: bionic
 sudo: false
-branches:
-  only:
-    - master
 addons:
   postgresql: '10'
-services:
-  - mysql
 cache:
   bundler: true
   directories:
     - /home/travis/.webdrivers/
 import:
   - land-of-apps/land-of-apps:travis/ruby-imports.yml
-bundler_args: --without development
-before_script:
+script:
   - export RETRY_COUNT=3
   - bin/rake refinery:testing:dummy_app
-script:
   - APPMAP=true bundle exec rake
 env:
   - DB=postgresql
